@@ -1,8 +1,16 @@
 import "../policies.css";
+import type { Metadata } from "next";
 
 const EFFECTIVE_DATE = "January 30, 2026";
 const CONTACT_EMAIL = "support@adviceapp.net";
 const APP_NAME = "AdVice";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description:
+    "Learn how AdVice collects, uses, and protects your information.",
+};
+
 
 export default function PrivacyPage() {
   return (

@@ -1,8 +1,15 @@
 import "../policies.css";
+import type { Metadata } from "next";
 
 const EFFECTIVE_DATE = "January 30, 2026";
 const CONTACT_EMAIL = "support@adviceapp.net";
 const APP_NAME = "AdVice";
+
+export const metadata: Metadata = {
+  title: "Terms & Conditions",
+  description:
+    "Terms governing the use of AdVice, including community rules and limitations.",
+};
 
 export default function TermsPage() {
   return (

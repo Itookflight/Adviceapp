@@ -118,7 +118,9 @@ export default function TermsPage() {
             {APP_NAME} is provided “as is” without warranties of any kind. To the
             maximum extent permitted by law, we are not liable for indirect,
             incidental, special, or consequential damages arising from use of
-            the service.
+            the service. Eligibility: You must be the age of legal majority or older in your place of residence to use the Services. By using the Services, you represent  that you are at least the age of majority in your place of residence.
+
+
           </p>
         </section>
 

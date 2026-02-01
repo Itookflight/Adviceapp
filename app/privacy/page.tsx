@@ -140,7 +140,9 @@ export default function PrivacyPage() {
         <section className="card">
           <div className="h2">Your Consent</div>
           <p className="p">
-          By using the Adcie app, you consent to this privacy policy.
+          By using the Advice app, you consent to this privacy policy. You must be the age of legal majority or older in your place of residence to use the Services. By using the Services, you represent that you are at least the age of majority in your place of residence.
+
+
           </p>
         </section>
 

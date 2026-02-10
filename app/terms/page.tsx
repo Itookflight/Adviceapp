@@ -33,7 +33,7 @@ export default function TermsPage() {
           <p className="p">
             {APP_NAME} provides tools for tracking habits or vices, optional
             community features, and AI-generated guidance intended to support
-            self-improvement and awareness. By downloading or using the Advice app, these terms will automatically apply to you
+            self-improvement and awareness. By downloading or using the AdVice app, these terms will automatically apply to you
           </p>
         </section>
 
@@ -50,6 +50,16 @@ export default function TermsPage() {
             need professional support, seek help from a qualified professional.
           </p>
         </section>
+
+        <section className="card">
+  <div className="h2">Eligibility</div>
+  <p className="p">
+    You must be at least 17 years of age to use the Services. By accessing or
+    using the Services, you represent and warrant that you meet this age
+    requirement.
+  </p>
+</section>
+
 
         {/* Accounts */}
         <section className="card">
@@ -69,13 +79,30 @@ export default function TermsPage() {
             <li>No harassment, bullying, hate speech, or threats.</li>
             <li>No sharing of personal or private information.</li>
             <li>No spam, scams, or impersonation.</li>
+            <li>No sexually explicit content or exploitation.</li>
+<li>No content that promotes self-harm or suicide.</li>
+<li>No illegal activity, including buying/selling illegal drugs.</li>
+<li>No sharing content involving minors in a sexual context (zero tolerance).</li>
+
             <li>Report content that violates community standards.</li>
           </ul>
-          <p className="p">
-            We reserve the right to remove content or restrict accounts that
-            violate these guidelines.
-          </p>
+<p className="p">
+  We may remove content, restrict visibility, or suspend accounts at our
+  discretion to enforce these Terms and maintain a safe community.
+</p>
+
         </section>
+
+        <section className="card">
+  <div className="h2">Reporting & Enforcement</div>
+  <p className="p">
+    If you encounter content or behavior that violates these Terms, you can
+    report it through the app. We may investigate reports and take action,
+    including content removal or account restrictions, to maintain platform
+    safety.
+  </p>
+</section>
+
 
         {/* User content */}
         <section className="card">
@@ -87,6 +114,21 @@ export default function TermsPage() {
             purpose of operating the service.
           </p>
         </section>
+        
+
+        <section className="card">
+  <div className="h2">Subscriptions & Billing</div>
+  <p className="p">
+    Certain features of {APP_NAME} may require a paid subscription. Payment will
+    be charged to your Apple ID account at confirmation of purchase.
+    Subscriptions may auto-renew unless canceled at least 24 hours before the
+    end of the current billing period. Auto-renewal may be turned off in your
+    Apple ID account settings. You can manage or cancel your subscription in
+    your Apple ID account settings. Payments and refunds are handled by Apple in
+    accordance with Apple’s policies.
+  </p>
+</section>
+
 
         {/* AI */}
         <section className="card">
@@ -118,11 +160,22 @@ export default function TermsPage() {
             {APP_NAME} is provided “as is” without warranties of any kind. To the
             maximum extent permitted by law, we are not liable for indirect,
             incidental, special, or consequential damages arising from use of
-            the service. Eligibility: You must be the age of legal majority or older in your place of residence to use the Services. By using the Services, you represent  that you are at least the age of majority in your place of residence.
+            the service.
 
 
           </p>
         </section>
+
+        <section className="card">
+  <div className="h2">Third-Party Services</div>
+  <p className="p">
+    {APP_NAME} relies on third-party services to operate (such as cloud storage,
+    subscriptions, and AI processing). Your use of these features may involve
+    processing of data by these providers in accordance with our Privacy Policy
+    and their own terms and privacy policies.
+  </p>
+</section>
+
 
         {/* Changes */}
         <section className="card">

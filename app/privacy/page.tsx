@@ -32,7 +32,7 @@ export default function PrivacyPage() {
         <section className="card">
           <div className="h2">Overview</div>
           <p className="p">
-            {APP_NAME} is a habit and vice and bad habit tracking application with optional
+            {APP_NAME} is a habit and behavior tracking application with optional
             community features and AI-powered guidance. The app is designed to be
             anonymous by default, and you control what information you choose to
             share.
@@ -61,10 +61,13 @@ export default function PrivacyPage() {
           </p>
 
           <p className="p">
-            <b>Technical information:</b> Limited device and app data such as
-            crash reports or performance metrics to help us maintain and improve
-            the service.
-          </p>
+  <b>Usage and technical information:</b> We may collect information about how
+  you use the app (such as feature usage, session activity, and interactions
+  with AI suggestions) and limited technical data (such as device model, OS
+  version, app version, IP address, and crash/diagnostic data) to operate,
+  secure, and improve the service.
+</p>
+
         </section>
 
         {/* How used */}
@@ -76,6 +79,7 @@ export default function PrivacyPage() {
             <li>To generate AI powered insights and guidance.</li>
             <li>To operate and moderate community features.</li>
             <li>To improve app reliability, performance, and safety.</li>
+            <li>Process payments for premium features (if applicable).</li>
           </ul>
         </section>
 
@@ -136,15 +140,47 @@ export default function PrivacyPage() {
           </p>
         </section>
 
-        {/* Consent */}
+        {/* Data Security */}
         <section className="card">
-          <div className="h2">Your Consent</div>
+          <div className="h2">Data Security</div>
           <p className="p">
-          By using the Advice app, you consent to this privacy policy. You must be the age of legal majority or older in your place of residence to use the Services. By using the Services, you represent that you are at least the age of majority in your place of residence.
+  We implement reasonable administrative, technical, and organizational
+  safeguards designed to protect your information against unauthorized access,
+  loss, misuse, or alteration. However, no method of transmission over the
+  internet or method of electronic storage is completely secure, and we cannot
+  guarantee absolute security.
+</p>
 
-
-          </p>
         </section>
+
+            {/* Childrens privacy */}
+        <section className="card">
+          <div className="h2">Children's Privacy</div>
+          <p className="p">
+  AdVice is not directed to individuals under the age of 17. We do not knowingly
+  collect, use, or disclose personal information from individuals under 17. If
+  we become aware that we have collected personal information from an individual
+  under 17, we will take reasonable steps to delete it.
+</p>
+
+        </section>
+        
+
+        {/* Consent */}
+<section className="card">
+  <div className="h2">Your Consent</div>
+  <p className="p">
+    By using the AdVice app, you acknowledge that you have read and understood
+    this Privacy Policy and consent to the collection, use, and processing of
+    your information as described herein.
+  </p>
+  <p className="p">
+    You must be at least 17 years of age to use the Services. By accessing or
+    using the Services, you represent and warrant that you meet this age
+    requirement.
+  </p>
+</section>
+
 
         {/* Changes */}
         <section className="card">
@@ -154,6 +190,26 @@ export default function PrivacyPage() {
             reflected by changing the effective date above, These changes are effective immediately after they are posted on this page.
           </p>
         </section>
+        
+    {/* 3rd party */}
+        <section className="card">
+          <div className="h2">Third-Party Services</div>
+          <p className="p">
+            AdVice may use third-party service providers to support the operation and functionality of the Services, such as cloud hosting, data processing, analytics, content moderation, payments, customer support and more. These service providers may process information on our behalf solely for the purpose of providing their services to AdVice and in accordance with our instructions.
+We require third-party service providers to implement appropriate safeguards to protect your information and to use it only as necessary to perform their services. The handling of information by such third parties is governed by their respective privacy policies, and AdVice is not responsible for the privacy practices of these third-party services.
+          </p>
+        </section>
+
+        <section className="card">
+  <div className="h2">Data Used for Tracking</div>
+  <p className="p">
+    AdVice does not use personal data to track users across apps or websites
+    owned by other companies for advertising or marketing purposes.
+  </p>
+</section>
+
+
+        
 
         {/* Contact */}
         <section className="card">

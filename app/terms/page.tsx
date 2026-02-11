@@ -54,7 +54,7 @@ export default function TermsPage() {
         <section className="card">
   <div className="h2">Eligibility</div>
   <p className="p">
-    You must be at least 17 years of age to use the Services. By accessing or
+    You must be at least 13 years of age to use the Services. By accessing or
     using the Services, you represent and warrant that you meet this age
     requirement.
   </p>

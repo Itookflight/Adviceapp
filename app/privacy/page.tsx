@@ -157,10 +157,10 @@ export default function PrivacyPage() {
         <section className="card">
           <div className="h2">Children's Privacy</div>
           <p className="p">
-  AdVice is not directed to individuals under the age of 17. We do not knowingly
-  collect, use, or disclose personal information from individuals under 17. If
+  AdVice is not directed to individuals under the age of 13. We do not knowingly
+  collect, use, or disclose personal information from individuals under 13. If
   we become aware that we have collected personal information from an individual
-  under 17, we will take reasonable steps to delete it.
+  under 13, we will take reasonable steps to delete it.
 </p>
 
         </section>
@@ -175,7 +175,7 @@ export default function PrivacyPage() {
     your information as described herein.
   </p>
   <p className="p">
-    You must be at least 17 years of age to use the Services. By accessing or
+    You must be at least 13 years of age to use the Services. By accessing or
     using the Services, you represent and warrant that you meet this age
     requirement.
   </p>

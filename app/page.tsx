@@ -1,75 +1,79 @@
 // app/page.tsx
+import Image from "next/image";
+
 const APPSTORE_URL =
   "https://apps.apple.com/us/app/advice-break-bad-habits/id6758634959";
 
 export default function Home() {
   return (
-    <main className="wrap">
-      <header className="top">
-        <div className="brand">
-          Ad<span>V</span>ice
-        </div>
+    <main className="joi3">
+      {/* Top Nav */}
+      <header className="joi3Nav">
+        <div className="joi3NavInner">
+          <div className="joi3Brand">
+            Ad<span>V</span>ice
+          </div>
 
-        <nav className="nav">
-          <a href="/privacy">Privacy</a>
-          <a href="/terms">Terms</a>
-          <a className="btn" href={APPSTORE_URL} target="_blank" rel="noreferrer">
-            Download
+          <a className="joi3TopBtn" href={APPSTORE_URL} target="_blank" rel="noreferrer">
+          <img src="/apple.svg" alt="" className="joi3Apple" />
+            Download for iOS
           </a>
-        </nav>
+        </div>
       </header>
 
-      <section className="hero">
-        <h1>
-          Break bad habits.
-          <br />
-          Build self-control.
-        </h1>
+      {/* Hero (Centered like Joi) */}
+      <section className="joi3Hero">
+        <div className="joi3HeroInner">
+          <h1 className="joi3H1">
+            Break bad
+            <br />
+            habits.
+            <br />
+            Build self-
+            <br />
+            control.
+          </h1>
 
-        <p className="sub">
-          Private, anonymous vice tracking with AI-powered insights to help you understand triggers,
-          track urges, and stop relapse windows before they start.
-        </p>
+          <a className="joi3MainBtn" href={APPSTORE_URL} target="_blank" rel="noreferrer">
+          <img src="/apple.svg" alt="" className="joi3Apple" />
+            Download for iOS
+          </a>
 
-        <div className="cta">
-          <a className="btn big" href={APPSTORE_URL} target="_blank" rel="noreferrer">
-            Download on the App Store
-          </a>
-          <a className="link" href="#what">
-            What you get →
-          </a>
+          <div className="joi3PhoneWrap">
+            <div className="joi3Glow" />
+            <Image
+              src="/phone.png"
+              alt="AdVice app preview"
+              width={520}
+              height={1040}
+              priority
+              className="joi3Phone"
+            />
+          </div>
+
+          {/* Description moved BELOW image */}
+          <p className="joi3Sub">
+            A Habit and Vice tracking app built for people who not only want to break and quit 
+            bad habits but understand them. The #1 Habit and Vice breaking app.
+          </p>
         </div>
       </section>
 
-      <section id="what" className="section">
-        <h2>What you get</h2>
-        <ul className="bullets">
-          <li>Track vices + custom habits (quit or reduce)</li>
-          <li>High-risk windows (late night, stress, weekends)</li>
-          <li>Real-time urge logging (mood + intensity)</li>
-          <li>AI focus, replacement actions, and micro-plans</li>
-          <li>Anonymous community (optional)</li>
-        </ul>
-      </section>
+      {/* Footer (like Joi: centered stack) */}
+      <footer className="joi3Footer">
+        <div className="joi3FooterInner">
+          <div className="joi3FootBrand">AdVice</div>
 
-      <section className="section note">
-        <h2>Privacy first</h2>
-        <p>
-          Anonymous by default. No public email or identity shown. You control what’s visible.
-        </p>
+          <div className="joi3FootLinks">
+            <a href={APPSTORE_URL} target="_blank" rel="noreferrer">
+              App Store
+            </a>
+            <a href="/terms">Terms</a>
+            <a href="/privacy">Privacy policy</a>
+          </div>
 
-        <div className="miniLinks">
-          <a href="/privacy">Privacy Policy</a>
-          <span className="dot">•</span>
-          <a href="/terms">Terms (EULA)</a>
+          <div className="joi3FootCrafted">2025 AdVice</div>
         </div>
-      </section>
-
-      <footer className="foot">
-        <div>© {new Date().getFullYear()} AdVice</div>
-        <a href={APPSTORE_URL} target="_blank" rel="noreferrer">
-          App Store
-        </a>
       </footer>
     </main>
   );

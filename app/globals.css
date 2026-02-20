@@ -12,7 +12,7 @@
 }
 
 * { box-sizing: border-box; }
-html, body { padding: 0; margin: 0; background: var(--bg); color: var(--text); }
+html, body { padding: 0; margin: 0; background: #f5f5f5; color: #000; }
 a { color: inherit; text-decoration: none; }
 p { margin: 0; }
 
@@ -100,6 +100,10 @@ p { margin: 0; }
   line-height: 1.5;
   max-width: 52ch;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 .ctaRow {
   margin-top: 18px;
@@ -160,7 +164,6 @@ p { margin: 0; }
 .mock {
   position: relative;
   border-radius: 26px;
-  overflow: hidden;
   border: 1px solid rgba(255,255,255,0.10);
   background: rgba(255,255,255,0.03);
   min-height: 420px;
@@ -205,7 +208,6 @@ p { margin: 0; }
   height: 10px;
   border-radius: 999px;
   background: rgba(255,255,255,0.08);
-  overflow: hidden;
 }
 .mockBarFill {
   height: 100%;
@@ -294,4 +296,676 @@ p { margin: 0; }
   .split { grid-template-columns: 1fr; }
   .h1 { font-size: 42px; }
   .navLinks .navLink { display: none; }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: -200px;
+    background:
+      radial-gradient(circle at 20% 10%, rgba(220,38,38,0.12), transparent 60%),
+      radial-gradient(circle at 80% 40%, rgba(59,130,246,0.08), transparent 60%);
+    z-index: -1;
+    pointer-events: none;
+  }
 }
+
+  /* ===== Joi-style homepage ===== */
+.joi {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.joiNav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(11, 11, 11, 0.75);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.joiNavInner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 18px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.joiBrand {
+  font-weight: 900;
+  letter-spacing: -0.2px;
+  font-size: 18px;
+}
+.joiBrand span {
+  color: var(--accent);
+}
+
+.joiLinks {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.joiLinks a {
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: 800;
+  font-size: 14px;
+}
+.joiLinks a:hover {
+  color: var(--text);
+}
+
+.joiBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  color: var(--text);
+  font-weight: 900;
+}
+.joiBtn:hover {
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.joiBtnBig {
+  height: 52px;
+  padding: 0 18px;
+  background: var(--accent);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+.joiBtnBig:hover {
+  filter: brightness(1.03);
+}
+
+.joiHero {
+  padding: 56px 0 22px;
+}
+
+.joiHeroInner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 18px;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 26px;
+  align-items: center;
+}
+
+.joiTag {
+  display: inline-flex;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.70);
+  font-weight: 900;
+  font-size: 13px;
+}
+
+.joiH1 {
+  margin: 14px 0 0;
+  font-size: clamp(38px, 5vw, 58px);
+  line-height: 1.04;
+  letter-spacing: -1px;
+  font-weight: 950;
+}
+
+.joiSub {
+  margin-top: 12px;
+  max-width: 54ch;
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: 800;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.joiCtas {
+  margin-top: 18px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.joiLink {
+  color: rgba(255, 255, 255, 0.70);
+  font-weight: 900;
+}
+.joiLink:hover {
+  color: var(--text);
+}
+
+.joiMini {
+  margin-top: 16px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  color: rgba(255, 255, 255, 0.45);
+  font-weight: 900;
+  font-size: 13px;
+}
+.joiDot {
+  opacity: 0.5;
+}
+
+.joiPhoneWrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.joiPhoneGlow {
+  position: absolute;
+  inset: -60px;
+  background:
+    radial-gradient(circle at 50% 40%, rgba(220,38,38,0.22), transparent 55%),
+    radial-gradient(circle at 35% 30%, rgba(255,255,255,0.06), transparent 60%);
+  filter: blur(12px);
+  z-index: 0;
+}
+
+.joiPhone {
+  position: relative;
+  z-index: 1;
+  width: min(420px, 92%);
+  height: auto;
+  filter: drop-shadow(0 24px 70px rgba(0,0,0,0.65));
+}
+
+.joiSection {
+  padding: 44px 0 70px;
+}
+
+.joiSectionInner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+.joiH2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 950;
+  letter-spacing: -0.3px;
+}
+
+.joiGrid {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.joiCard {
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  padding: 14px;
+}
+
+.joiCardTitle {
+  font-weight: 950;
+}
+
+.joiCardText {
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.60);
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.joiFooter {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 22px 0;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 900;
+}
+
+.joiFooterInner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.joiFootLinks {
+  display: flex;
+  gap: 14px;
+}
+.joiFootLinks a:hover {
+  color: var(--text);
+}
+
+@media (max-width: 900px) {
+  .joiHeroInner {
+    grid-template-columns: 1fr;
+  }
+  .joiGrid {
+    grid-template-columns: 1fr;
+  }
+  .joiLinks a:not(.joiBtn) {
+    display: none;
+  }
+}
+/* ===== Joi-like landing (simple + near-identical structure) ===== */
+.joi2 {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.joi2Nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(11,11,11,0.72);
+  backdrop-filter: blur(10px);
+}
+
+.joi2NavInner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 18px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.joi2Brand {
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 18px;
+}
+.joi2Brand span { color: var(--accent); }
+
+.joi2Links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.joi2Links a {
+  color: rgba(255,255,255,0.62);
+  font-weight: 800;
+  font-size: 14px;
+}
+.joi2Links a:hover { color: rgba(255,255,255,0.92); }
+
+.joi2TextBtn {
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.04);
+}
+
+.joi2Hero {
+  padding: 64px 0 28px;
+}
+
+.joi2HeroInner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 18px;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.joi2H1 {
+  margin: 0;
+  font-weight: 950;
+  letter-spacing: -0.06em;
+  line-height: 0.98;
+  font-size: clamp(46px, 6.2vw, 92px);
+}
+
+.joi2Sub {
+  margin-top: 18px;
+  max-width: 56ch;
+  color: rgba(255,255,255,0.60);
+  font-weight: 750;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.joi2Ctas {
+  margin-top: 18px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.joi2BadgeLink { display: inline-flex; }
+.joi2Badge {
+  height: 46px;
+  width: auto;
+  opacity: 0.95;
+}
+.joi2Badge:hover { opacity: 1; }
+
+.joi2Secondary {
+  color: rgba(255,255,255,0.65);
+  font-weight: 900;
+}
+.joi2Secondary:hover { color: rgba(255,255,255,0.92); }
+
+.joi2PhoneWrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.joi2Glow {
+  position: absolute;
+  inset: -80px;
+  background:
+    radial-gradient(circle at 50% 40%, rgba(255,255,255,0.07), transparent 60%),
+    radial-gradient(circle at 55% 35%, rgba(220,38,38,0.18), transparent 62%);
+  filter: blur(14px);
+  pointer-events: none;
+}
+
+.joi2Phone {
+  position: relative;
+  width: min(440px, 92%);
+  height: auto;
+  filter: drop-shadow(0 28px 90px rgba(0,0,0,0.70));
+}
+
+.joi2Section {
+  padding: 30px 0 70px;
+}
+
+.joi2SectionInner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+.joi2Grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.joi2Card {
+  border-radius: 18px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.09);
+  padding: 14px;
+}
+
+.joi2CardTitle {
+  font-weight: 950;
+  color: rgba(255,255,255,0.92);
+}
+.joi2CardText {
+  margin-top: 8px;
+  color: rgba(255,255,255,0.58);
+  font-weight: 750;
+  line-height: 1.5;
+}
+
+.joi2Footer {
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: rgba(255,255,255,0.50);
+  font-weight: 850;
+  font-size: 13px;
+}
+
+.joi2FootLinks {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+}
+.joi2FootLinks a:hover { color: #000; }
+
+@media (max-width: 900px) {
+  .joi2HeroInner { grid-template-columns: 1fr; }
+  .joi2Grid { grid-template-columns: 1fr; }
+  .joi2Links a:not(.joi2TextBtn) { display: none; }
+  .joi2Phone { width: min(420px, 94%); }
+  .joi2Hero { padding-top: 44px; }
+}
+/* ===== Joi-like v3 (centered hero + button under title + footer like Joi) ===== */
+.joi3 {
+  min-height: 100vh;
+  background: #f5f5f5;
+  color: #000;
+}
+
+/* Top nav */
+.joi3Nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(245,245,245,0.8);
+  backdrop-filter: blur(10px);
+}
+
+.joi3NavInner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 18px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.joi3TopBtn {
+  margin-left: auto; /* forces it to the far right */
+}
+
+.joi3Brand {
+  font-weight: 900;
+  font-size: 20px;
+  color: #000;
+}
+.joi3Brand span {
+  color: #e10600; /* cleaner red */
+}
+
+.joi3TopBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: 999px;
+  background: #000;
+  color: #fff;
+  font-weight: 900;
+  border: none;
+}
+.joi3TopBtn:hover {
+  background: #111;
+}
+/* Apple icon (pure CSS — no asset needed) */
+.joi3Apple {
+  width: 22px;
+  height: 22px;
+  display: block;
+  flex: 0 0 auto;
+  fill: currentColor;
+}
+/* Centered hero */
+.joi3Hero {
+  padding: 72px 0 40px;
+}
+
+.joi3TopBtn {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.joi3MainBtn {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* makes a black svg appear white */
+.joi3TopBtn .joi3Apple,
+.joi3MainBtn .joi3Apple {
+  filter: invert(1);
+}
+
+.joi3TopBtn svg,
+.joi3MainBtn svg {
+  overflow: visible !important;
+}
+
+.joi3HeroInner {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.joi3H1 {
+  margin: 0;
+  font-weight: 950;
+  letter-spacing: -0.05em;
+  line-height: 0.98;
+  font-size: clamp(48px, 7vw, 96px);
+  color: #000;
+}
+
+/* Big centered button under title */
+.joi3MainBtn {
+  margin-top: 28px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 32px;
+  border-radius: 999px;
+  background: #000;
+  color: #fff;
+  font-weight: 950;
+  font-size: 20px;
+  border: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.joi3MainBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* Phone */
+.joi3PhoneWrap {
+  position: relative;
+  margin-top: 34px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+.joi3Phone {
+  position: relative;
+  width: min(360px, 82vw);
+  height: auto;
+  filter: drop-shadow(0 26px 90px rgba(0,0,0,0.70));
+}
+
+/* Description after image */
+.joi3Sub {
+  margin-top: 32px;
+  max-width: 62ch;
+  color: #000;
+  font-weight: 600;
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+/* Footer like Joi */
+.joi3Footer {
+  padding: 80px 0 100px;
+}
+
+.joi3FooterInner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+
+.joi3FootBrand {
+  font-weight: 700;
+  font-size: 28px;
+  color: #000;
+}
+
+.joi3TopBtn,
+.joi3MainBtn,
+.joi3TopBtn:visited,
+.joi3MainBtn:visited {
+  text-decoration: none !important;
+}
+
+.joi3TopBtn * ,
+.joi3MainBtn * {
+  text-decoration: none !important;
+}
+
+.joi3FootLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  font-weight: 900;
+  font-size: 30px;
+  color: #000;
+}
+.joi3FootLinks a {
+  color: #000;
+}
+
+.joi3FootLinks a:hover {
+  color: #000;
+}
+
+.joi3FootCrafted {
+  margin-top: 10px;
+  color: #000;
+  font-weight: 700;
+}
+
+@media (max-width: 520px) {
+  .joi3TopBtn {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+  .joi3FootLinks {
+    font-size: 26px;
+  }
+}
+

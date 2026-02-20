@@ -1,6 +1,5 @@
 import "./globals.css";
 import "./policies.css";
-import "./home.css";
 import { Analytics } from "@vercel/analytics/next";
 
 export const metadata = {
@@ -10,8 +9,11 @@ export const metadata = {
   },
   description:
     "AdVice is a private, anonymous habit & vice-tracking app with AI-powered insights to help you break the loop and build self-control.",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 };
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">

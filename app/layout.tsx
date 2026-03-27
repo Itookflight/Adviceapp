@@ -2,6 +2,7 @@
 import "./globals.css";
 import "./policies.css";
 import { Analytics } from "@vercel/analytics/next";
+import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -22,6 +23,10 @@ export const metadata: Metadata = {
     "quit drinking app",
     "quit smoking tracker",
     "AI habit tracking",
+    "Stop Overeating",
+    "stop procastination",
+    "lockin",
+    "quit lust app",
     "urge tracking app",
     "relapse prevention app",
     "dopamine detox app",
@@ -111,6 +116,20 @@ export default function RootLayout({
           fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, Arial",
         }}
       >
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-LYLQ4BVF5W"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            window.gtag = gtag;
+            gtag('js', new Date());
+            gtag('config', 'G-LYLQ4BVF5W');
+          `}
+        </Script>
+
         {children}
         <Analytics />
       </body>

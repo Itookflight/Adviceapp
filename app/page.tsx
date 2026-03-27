@@ -78,8 +78,8 @@ export default function Home() {
 
             <p className="av-sub av-anim av-anim-5">
               AdVice goes beyond streaks — it tracks your urges, identifies
-              triggers, and gives you an AI plan to actually understand why you
-              slip. Built for quitting alcohol, nicotine, vaping, and more.
+              triggers, and gives you an Personalized plan to actually understand why you
+              slip. Built for quitting ANY Bad Habit like alcohol, nicotine, Porn, Overeating, Procastination and more.
             </p>
 
             <div className="av-cta-row av-anim av-anim-6">

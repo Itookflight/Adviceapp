@@ -3,7 +3,7 @@
 
 import Image from "next/image";
 
-const APPSTORE_URL = "https://adviceapp.onelink.me/mg8p/yqvaexiy";
+const BASE_APPSTORE_URL = "https://adviceapp.onelink.me/mg8p/yqvaexiy";
 
 declare global {
   interface Window {
@@ -12,18 +12,40 @@ declare global {
   }
 }
 
+function getAppStoreUrl(location: string) {
+  return `${BASE_APPSTORE_URL}?pid=website&c=${location}&af_channel=organic-web`;
+}
+
 function trackAppStoreClick(location: string) {
+  console.log("app_store_click", location, getAppStoreUrl(location));
   if (typeof window !== "undefined") {
+    const destination = getAppStoreUrl(location);
+
     window.gtag?.("event", "app_store_click", {
       event_category: "engagement",
       event_label: location,
-      destination: APPSTORE_URL,
+      destination,
     });
+
     window.fbq?.("trackCustom", "AppStoreClick", {
       location,
-      destination: APPSTORE_URL,
+      destination,
     });
   }
+}
+
+function handleTrackedClick(
+  e: React.MouseEvent<HTMLAnchorElement>,
+  location: string
+) {
+  e.preventDefault();
+
+  const destination = getAppStoreUrl(location);
+  trackAppStoreClick(location);
+
+  setTimeout(() => {
+    window.open(destination, "_blank", "noopener,noreferrer");
+  }, 200);
 }
 
 const AppleIcon = ({ className }: { className?: string }) => (
@@ -35,17 +57,17 @@ const AppleIcon = ({ className }: { className?: string }) => (
 export default function Home() {
   return (
     <main className="av-page">
-
-      {/* NAV */}
       <header className="av-nav">
         <div className="av-nav-inner">
-          <div className="av-brand">Ad<span>V</span>ice</div>
+          <div className="av-brand">
+            Ad<span>V</span>ice
+          </div>
           <a
             className="av-nav-btn"
-            href={APPSTORE_URL}
+            href={getAppStoreUrl("top_nav")}
             target="_blank"
-            rel="noreferrer"
-            onClick={() => trackAppStoreClick("top_nav")}
+            rel="noreferrer noopener"
+            onClick={(e) => handleTrackedClick(e, "top_nav")}
           >
             <AppleIcon className="av-apple" />
             Download for iOS
@@ -53,13 +75,10 @@ export default function Home() {
         </div>
       </header>
 
-      {/* HERO */}
       <section className="av-hero-wrap">
         <div className="av-hero-glow" />
         <div className="av-hero-glow av-hero-glow-2" />
         <div className="av-hero">
-
-          {/* LEFT */}
           <div className="av-hero-left">
             <div className="av-eyebrow av-anim av-anim-1">
               <span className="av-eyebrow-dot" />
@@ -78,17 +97,18 @@ export default function Home() {
 
             <p className="av-sub av-anim av-anim-5">
               AdVice goes beyond streaks — it tracks your urges, identifies
-              triggers, and gives you an Personalized plan to actually understand why you
-              slip. Built for quitting ANY Bad Habit like alcohol, nicotine, Porn, Overeating, Procastination and more.
+              triggers, and gives you a personalized plan to actually understand
+              why you slip. Built for quitting any bad habit like alcohol,
+              nicotine, porn, overeating, procrastination, and more.
             </p>
 
             <div className="av-cta-row av-anim av-anim-6">
               <a
                 className="av-cta-primary"
-                href={APPSTORE_URL}
+                href={getAppStoreUrl("hero_cta")}
                 target="_blank"
-                rel="noreferrer"
-                onClick={() => trackAppStoreClick("hero_cta")}
+                rel="noreferrer noopener"
+                onClick={(e) => handleTrackedClick(e, "hero_cta")}
               >
                 <AppleIcon className="av-apple av-apple-dark" />
                 Download for iOS — Free
@@ -98,23 +118,28 @@ export default function Home() {
 
             <div className="av-stats av-anim av-anim-7">
               <div className="av-stat">
-                <div className="av-stat-num"><em>#1</em></div>
+                <div className="av-stat-num">
+                  <em>#1</em>
+                </div>
                 <div className="av-stat-label">Habit breaking app</div>
               </div>
               <div className="av-stat-div" />
               <div className="av-stat">
-                <div className="av-stat-num">10<em>k+</em></div>
+                <div className="av-stat-num">
+                  10<em>k+</em>
+                </div>
                 <div className="av-stat-label">Habits broken</div>
               </div>
               <div className="av-stat-div" />
               <div className="av-stat">
-                <div className="av-stat-num"><em>AI</em></div>
+                <div className="av-stat-num">
+                  <em>AI</em>
+                </div>
                 <div className="av-stat-label">Personalized plans</div>
               </div>
             </div>
           </div>
 
-          {/* RIGHT — phone */}
           <div className="av-phone-wrap av-anim av-anim-3">
             <div className="av-phone-glow" />
             <Image
@@ -126,16 +151,13 @@ export default function Home() {
               className="av-phone"
             />
           </div>
-
         </div>
       </section>
 
-      {/* FEATURES */}
       <section className="av-features">
         <div className="av-features-inner">
           <div className="av-section-label">What makes AdVice different</div>
           <div className="av-feat-grid">
-
             <div className="av-feat">
               <div className="av-feat-icon">
                 <svg viewBox="0 0 24 24" fill="currentColor">
@@ -143,7 +165,9 @@ export default function Home() {
                 </svg>
               </div>
               <div className="av-feat-title">Streak tracking</div>
-              <div className="av-feat-desc">Visual momentum. Every clean day counted.</div>
+              <div className="av-feat-desc">
+                Visual momentum. Every clean day counted.
+              </div>
             </div>
 
             <div className="av-feat">
@@ -153,7 +177,9 @@ export default function Home() {
                 </svg>
               </div>
               <div className="av-feat-title">Trigger journal</div>
-              <div className="av-feat-desc">Log urges. Spot patterns. Stop the cycle.</div>
+              <div className="av-feat-desc">
+                Log urges. Spot patterns. Stop the cycle.
+              </div>
             </div>
 
             <div className="av-feat">
@@ -163,7 +189,9 @@ export default function Home() {
                 </svg>
               </div>
               <div className="av-feat-title">AI insights</div>
-              <div className="av-feat-desc">Personalized plans built from your data.</div>
+              <div className="av-feat-desc">
+                Personalized plans built from your data.
+              </div>
             </div>
 
             <div className="av-feat">
@@ -173,23 +201,25 @@ export default function Home() {
                 </svg>
               </div>
               <div className="av-feat-title">Anonymous community</div>
-              <div className="av-feat-desc">Real support. Zero judgment.</div>
+              <div className="av-feat-desc">
+                Real support. Zero judgment.
+              </div>
             </div>
-
           </div>
         </div>
       </section>
 
-      {/* FOOTER */}
       <footer className="av-footer">
         <div className="av-footer-inner">
-          <div className="av-foot-brand">Ad<span>V</span>ice</div>
+          <div className="av-foot-brand">
+            Ad<span>V</span>ice
+          </div>
           <div className="av-foot-links">
             <a
-              href={APPSTORE_URL}
+              href={getAppStoreUrl("footer_link")}
               target="_blank"
-              rel="noreferrer"
-              onClick={() => trackAppStoreClick("footer_link")}
+              rel="noreferrer noopener"
+              onClick={(e) => handleTrackedClick(e, "footer_link")}
             >
               App Store
             </a>
@@ -199,7 +229,6 @@ export default function Home() {
           <div className="av-foot-copy">© 2025 AdVice</div>
         </div>
       </footer>
-
     </main>
   );
 }

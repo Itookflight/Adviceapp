@@ -56,8 +56,7 @@ export default function PrivacyPage() {
           </p>
 
           <p className="p">
-            <b>Community content (optional):</b> Posts, comments, reactions,
-            reports, and interactions if you participate in community features.
+            <b>Community content (optional):</b> Posts, comments, reactions, reports, and interactions if you participate in community features. When creating a post, you may optionally attach an image from your photo library to share your progress or struggles with the community. Photos are only accessed when you choose to attach them and are not stored beyond your post.
           </p>
 
           <p className="p">

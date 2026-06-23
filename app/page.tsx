@@ -59,9 +59,7 @@ export default function Home() {
     <main className="av-page">
       <header className="av-nav">
         <div className="av-nav-inner">
-          <div className="av-brand">
-            Ad<span>V</span>ice
-          </div>
+        <div className="av-brand">Vice<span>B</span>reakr</div>
           <a
             className="av-nav-btn"
             href={getAppStoreUrl("top_nav")}
@@ -96,7 +94,7 @@ export default function Home() {
             </h1>
 
             <p className="av-sub av-anim av-anim-5">
-              AdVice goes beyond streaks — it tracks your urges, identifies
+            ViceBreakr goes beyond streaks — it tracks your urges, identifies
               triggers, and gives you a personalized plan to actually understand
               why you slip. Built for quitting any bad habit like alcohol,
               nicotine, porn, overeating, procrastination, and more.
@@ -144,7 +142,7 @@ export default function Home() {
             <div className="av-phone-glow" />
             <Image
               src="/phone.png"
-              alt="AdVice app preview"
+              alt="ViceBreakr app preview"
               width={520}
               height={1040}
               priority
@@ -156,7 +154,7 @@ export default function Home() {
 
       <section className="av-features">
         <div className="av-features-inner">
-          <div className="av-section-label">What makes AdVice different</div>
+          <div className="av-section-label">What makes ViceBreakr different</div>
           <div className="av-feat-grid">
             <div className="av-feat">
               <div className="av-feat-icon">
@@ -211,9 +209,7 @@ export default function Home() {
 
       <footer className="av-footer">
         <div className="av-footer-inner">
-          <div className="av-foot-brand">
-            Ad<span>V</span>ice
-          </div>
+        <div className="av-foot-brand">Vice<span>B</span>reakr</div>
           <div className="av-foot-links">
             <a
               href={getAppStoreUrl("footer_link")}
@@ -226,7 +222,7 @@ export default function Home() {
             <a href="/terms">Terms</a>
             <a href="/privacy">Privacy policy</a>
           </div>
-          <div className="av-foot-copy">© 2025 AdVice</div>
+          <div className="av-foot-copy">© 2025 ViceBreakr</div>
         </div>
       </footer>
     </main>

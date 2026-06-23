@@ -3,12 +3,13 @@ import type { Metadata } from "next";
 
 const EFFECTIVE_DATE = "January 30, 2026";
 const CONTACT_EMAIL = "support@adviceapp.net";
-const APP_NAME = "AdVice";
+const APP_NAME = "ViceBreakr";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "Learn how AdVice collects, uses, and protects your information.",
+    "Learn how ViceBreakr - Bad Habit Break collects, uses, and protects your information."
+
 };
 
 
@@ -18,12 +19,10 @@ export default function PrivacyPage() {
       <div className="container">
         {/* Header */}
         <div className="header">
-          <div className="brand">
-            Ad<span>V</span>ice
-          </div>
+        <div className="brand">Vice<span>B</span>reakr</div>
           <div className="h1">Privacy Policy</div>
           <div className="sub">
-            Effective date: {EFFECTIVE_DATE}. This policy explains how AdVice
+            Effective date: {EFFECTIVE_DATE}. This policy explains how ViceBreakr
              collects, uses, and protects your information.
           </div>
         </div>
@@ -92,7 +91,7 @@ export default function PrivacyPage() {
           </p>
           <p className="p">
             AI generated content is informational only and is not medical,
-            psychological, or professional advice. You are responsible for how
+            psychological, or professional ViceBreakr. You are responsible for how
             you choose to use it.
           </p>
         </section>
@@ -156,7 +155,7 @@ export default function PrivacyPage() {
         <section className="card">
           <div className="h2">Children's Privacy</div>
           <p className="p">
-  AdVice is not directed to individuals under the age of 13. We do not knowingly
+          ViceBreakr is not directed to individuals under the age of 13. We do not knowingly
   collect, use, or disclose personal information from individuals under 13. If
   we become aware that we have collected personal information from an individual
   under 13, we will take reasonable steps to delete it.
@@ -169,7 +168,7 @@ export default function PrivacyPage() {
 <section className="card">
   <div className="h2">Your Consent</div>
   <p className="p">
-    By using the AdVice app, you acknowledge that you have read and understood
+    By using the ViceBreakr app, you acknowledge that you have read and understood
     this Privacy Policy and consent to the collection, use, and processing of
     your information as described herein.
   </p>
@@ -194,15 +193,15 @@ export default function PrivacyPage() {
         <section className="card">
           <div className="h2">Third-Party Services</div>
           <p className="p">
-            AdVice may use third-party service providers to support the operation and functionality of the Services, such as cloud hosting, data processing, analytics, content moderation, payments, customer support and more. These service providers may process information on our behalf solely for the purpose of providing their services to AdVice and in accordance with our instructions.
-We require third-party service providers to implement appropriate safeguards to protect your information and to use it only as necessary to perform their services. The handling of information by such third parties is governed by their respective privacy policies, and AdVice is not responsible for the privacy practices of these third-party services.
+           ViceBreakr may use third-party service providers to support the operation and functionality of the Services, such as cloud hosting, data processing, analytics, content moderation, payments, customer support and more. These service providers may process information on our behalf solely for the purpose of providing their services to ViceBreakr and in accordance with our instructions.
+We require third-party service providers to implement appropriate safeguards to protect your information and to use it only as necessary to perform their services. The handling of information by such third parties is governed by their respective privacy policies, and ViceBreakr is not responsible for the privacy practices of these third-party services.
           </p>
         </section>
 
         <section className="card">
   <div className="h2">Data Used for Tracking</div>
   <p className="p">
-    AdVice does not use personal data to track users across apps or websites
+  ViceBreakr does not use personal data to track users across apps or websites
     owned by other companies for advertising or marketing purposes.
   </p>
 </section>

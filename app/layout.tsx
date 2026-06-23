@@ -9,14 +9,18 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.adviceapp.net"),
 
   title: {
-    default: "AdVice — Break Bad Habits. Build Self-Control.",
-    template: "%s | AdVice",
+    default: "ViceBreakr - Bad Habit Break",
+    template: "%s | ViceBreakr",
   },
 
   description:
-    "AdVice is an AI-powered app to break bad habits, track urges, and stop relapse cycles. Built for quitting alcohol, nicotine, vaping, and more — understand your triggers and rewire your behavior for good.",
+  "ViceBreakr is an AI-powered app to break bad habits, track urges, and stop relapse cycles. Built for quitting alcohol, nicotine, vaping, and more — understand your triggers and rewire your behavior for good.",
 
   keywords: [
+    "ViceBreakr",
+"ViceBreakr app",
+"vice breaker app",
+"bad habit breaker",
     "habit tracker",
     "break bad habits app",
     "self control app",
@@ -72,17 +76,17 @@ export const metadata: Metadata = {
   ],
 
   openGraph: {
-    title: "AdVice — Break Bad Habits. Build Self-Control.",
+    title: "ViceBreakr — Bad Habit Break. Build Self-Control.",
     description:
-      "AI-powered habit tracker for quitting alcohol, nicotine, vaping, and more. Track urges, understand triggers, and stop relapse cycles with AdVice.",
+      "AI-powered habit tracker for quitting lust, porn, alcohol, nicotine, vaping, and more. Track urges, understand triggers, and stop relapse cycles with ViceBreakr.",
     url: "https://www.adviceapp.net",
-    siteName: "AdVice",
+    siteName: "ViceBreakr",
     images: [
       {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "AdVice — Break Bad Habits. Build Self-Control.",
+        alt: "ViceBreakr - Bad Habit Break",
       },
     ],
     locale: "en_US",
@@ -91,9 +95,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "AdVice — Break Bad Habits. Build Self-Control.",
+    title: "ViceBreakr - Bad Habit Break",
     description:
-      "AI-powered habit tracker for quitting alcohol, nicotine, vaping, and more. Track urges, understand triggers, and stop relapse cycles with AdVice.",
+      "AI-powered habit tracker for quitting alcohol, nicotine, vaping, and more. Track urges, understand triggers, and stop relapse cycles with ViceBreakr.",
     images: ["/og.png"],
   },
 

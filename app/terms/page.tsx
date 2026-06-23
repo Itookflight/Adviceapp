@@ -3,12 +3,12 @@ import type { Metadata } from "next";
 
 const EFFECTIVE_DATE = "January 30, 2026";
 const CONTACT_EMAIL = "support@adviceapp.net";
-const APP_NAME = "AdVice";
+const APP_NAME = "ViceBreakr";
 
 export const metadata: Metadata = {
   title: "Terms & Conditions",
   description:
-    "Terms governing the use of AdVice, including community rules and limitations.",
+   "Terms governing the use of ViceBreakr - Bad Habit Break, including community rules and limitations."
 };
 
 export default function TermsPage() {
@@ -33,7 +33,7 @@ export default function TermsPage() {
           <p className="p">
             {APP_NAME} provides tools for tracking habits or vices, optional
             community features, and AI-generated guidance intended to support
-            self-improvement and awareness. By downloading or using the AdVice app, these terms will automatically apply to you
+            self-improvement and awareness. By downloading or using the ViceBreakr app, these terms will automatically apply to you
           </p>
         </section>
 

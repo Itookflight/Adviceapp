@@ -2,6 +2,7 @@
 "use client";
 
 import Image from "next/image";
+import { useEffect } from "react";
 
 const BASE_APPSTORE_URL = "https://adviceapp.onelink.me/mg8p/yqvaexiy";
 
@@ -55,7 +56,21 @@ const AppleIcon = ({ className }: { className?: string }) => (
 );
 
 export default function Home() {
+  useEffect(() => {
+    const host = window.location.hostname;
+
+    if (
+      host === "vicebreakr.app" ||
+      host === "www.vicebreakr.app"
+    ) {
+      window.location.replace(
+        "https://adviceapp.onelink.me/mg8p/citk4mib"
+      );
+    }
+  }, []);
+
   return (
+    
     <main className="av-page">
       <header className="av-nav">
         <div className="av-nav-inner">
